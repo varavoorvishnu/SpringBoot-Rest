@@ -21,16 +21,16 @@ public class ZooService {
 		return zooRepository.getAllAnimals();
 	}
 
-	public String addNewAnimal(Animal animal) {
+	public ResponseEntity<Animal> addNewAnimal(Animal animal) {
 		
 		return zooRepository.addNewAnimal(animal);
 	}
 
-	public String removeAnimal(String animal_id) {
+	public String removeAnimal(int animal_id) {
 		return zooRepository.removeAnimal(animal_id);
 	}
 
-	public ResponseEntity<Animal> updateAnimal(String id,Animal animal) {
+	public ResponseEntity<Animal> updateAnimal(int id,Animal animal) {
 		
 		return zooRepository.updateAnimal(id,animal);
 	}

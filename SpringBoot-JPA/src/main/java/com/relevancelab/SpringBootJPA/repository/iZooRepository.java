@@ -1,9 +1,11 @@
 package com.relevancelab.SpringBootJPA.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.relevancelab.SpringBootJPA.models.Animal;
 
-public interface iZooRepository extends CrudRepository<Animal, String> {
+public interface iZooRepository extends JpaRepository<Animal, Serializable> {
 
 }

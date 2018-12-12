@@ -3,18 +3,21 @@ package com.relevancelab.SpringBootJPA.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.beans.factory.annotation.Value;
+
+
 
 @Entity
-@Table(name = "Animals")
-public class Animal {
+@Table(name="Animals")
+public  class Animal {
+	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column
-	String animal_id;
+	int animal_id;
 	
 	@Column
 	String animal_name;
@@ -23,12 +26,12 @@ public class Animal {
 	String animal_type;
 	
 	
-	
-	public String getAnimal_id() {
+
+	public int getAnimal_id() {
 		return animal_id;
 	}
 
-	public void setAnimal_id(String animal_id) {
+	public void setAnimal_id(int animal_id) {
 		this.animal_id = animal_id;
 	}
 
