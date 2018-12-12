@@ -47,7 +47,7 @@
     <version>8.0.13</version><!--$NO-MVN-MAN-VER$-->
 </dependency>
 
-
+<!-- The spring-boot-devtools dependeny REBOOTS the springboot server automatically for every SAVE in the code -->
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
