@@ -29,16 +29,12 @@ public class ZooRepository {
 	public Collection<Animal> getAllAnimals() {
 		animalList = (Collection<Animal>)izooRepository.findAll();
 		return animalList;
-		
 	}
 
-	
 	public ResponseEntity<Animal> addNewAnimal(Animal animal) {
 		return new ResponseEntity<>(izooRepository.save(animal),HttpStatus.OK);
-		
 	}
 
-	
 	public String removeAnimal(int animal_id) {
 		izooRepository.deleteById(animal_id);
 	return "Animal removed :"+animal_id;
@@ -48,7 +44,7 @@ public class ZooRepository {
 	public ResponseEntity<Animal> updateAnimal(int animal_id,Animal animal) {
 		Optional<Animal> OptionalAnimal=izooRepository.findById(animal_id);
 		if(OptionalAnimal.isPresent()) {
-			System.out.println(animal.getAnimal_name());
+			
 			Animal oldanimal = OptionalAnimal.get();
 			
 			oldanimal.setAnimal_name(animal.getAnimal_name());
